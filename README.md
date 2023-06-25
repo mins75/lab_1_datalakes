@@ -11,6 +11,10 @@ Needs the subscription_id from Azure available with `az login`
 - Get both the account name and account key to run the script to upload files on Azure
 - Upload each file if possible, if not (.zip) it will unzip it and extract the files and upload them on Azure
 
+## Issues
+
+It creates an empty file in case of a folder (see second screen) that will be empty
+
 ## Example
 
 After running the script, we will see on Azure that we have created the resource group
