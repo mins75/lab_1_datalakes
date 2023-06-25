@@ -41,28 +41,16 @@ def create_container(subscription_id):
         {
             "location" : LOCATION,
             "kind": "StorageV2",
-            "sku": {"name": "Standard_LRS"}
+            "sku": {"name": "Standard_LRS"} # it is only a lab so no need for a better option
         }
     )
 
     account_result = poller.result()
-    #print(f"Provisioned storage account {account_result.name}")
+    print(f"Provisioned storage account {account_result.name}")
 
     # Step 3: Retrieve the account's primary access key and generate a connection string.
     keys = storage_client.storage_accounts.list_keys(RESOURCE_GROUP_NAME, STORAGE_ACCOUNT_NAME)
     print(f"Primary key for storage account: {keys.keys[0].value}")
-
-    conn_string = f"DefaultEndpointsProtocol=https;EndpointSuffix=core.windows.net;AccountName={STORAGE_ACCOUNT_NAME};AccountKey={keys.keys[0].value}"
-    #print(f"Connection string: {conn_string}")
-
-    # Step 4: Provision the blob container in the account (this call is synchronous)
-    #CONTAINER_NAME = "blob-container-01"
-    #container = storage_client.blob_containers.create(RESOURCE_GROUP_NAME, STORAGE_ACCOUNT_NAME, CONTAINER_NAME, {})
-
-    # The fourth argument is a required BlobContainer object, but because we don't need any
-    # special values there, so we just pass empty JSON.
-
-    #print(f"Provisioned blob container {container.name}")
 
     print("Created a new azure storage : ", STORAGE_ACCOUNT_NAME)
 
