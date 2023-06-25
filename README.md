@@ -1,2 +1,27 @@
 # lab_1_datalakes
-repo for the 1st lab of datalakes
+
+To launch the script : `python datalakes_upload_azure_script.py <subscription_id>`
+
+Needs the subscription_id from Azure available with `az login`
+
+
+## Script
+
+- It will create a resource group on Azure, provision it.
+- Get both the account name and account key to run the script to upload files on Azure
+
+## Example
+
+After running the script, we will see on Azure that we have created the resource group
+
+![image](https://github.com/mins75/lab_1_datalakes/assets/94439376/41a2afed-26ae-4027-a1d9-d13de6795776)
+
+Within this resource group, we will have our storage account :
+
+![image](https://github.com/mins75/lab_1_datalakes/assets/94439376/edf9e590-ae55-461b-92b8-63c760d0ca55)
+
+And within a created container, we will have our files :
+
+![image](https://github.com/mins75/lab_1_datalakes/assets/94439376/36d9d043-bcb8-4b24-8874-0c6eb6144fc7)
+
+
