@@ -26,3 +26,10 @@ And within a created container, we will have our files :
 ![image](https://github.com/mins75/lab_1_datalakes/assets/94439376/36d9d043-bcb8-4b24-8874-0c6eb6144fc7)
 
 
+## Annex 
+
+Here are the two sources that helped me to create mine :
+
+https://github.com/Azure/azure-sdk-for-python/blob/main/sdk/storage/azure-storage-file-datalake/samples/datalake_samples_upload_download.py
+
+https://learn.microsoft.com/fr-fr/azure/developer/python/sdk/examples/azure-sdk-example-storage?tabs=cmd
