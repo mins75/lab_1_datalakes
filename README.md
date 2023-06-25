@@ -9,6 +9,7 @@ Needs the subscription_id from Azure available with `az login`
 
 - It will create a resource group on Azure, provision it.
 - Get both the account name and account key to run the script to upload files on Azure
+- Upload each file if possible, if not (.zip) it will unzip it and extract the files and upload them on Azure
 
 ## Example
 
